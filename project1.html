@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <title> Projek 1 | myVIA
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/morris.css" type="text/css">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+</head>
+
+<body class="background">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <h1 class="logo">my<span class="gold">VIA<span></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="photogallery.html">Fotogalerie</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdownMenuLink" data - toggle="dropdown" aria - haspopup="true" aria - expanded="false">Blog</a>
+                                <div class="dropdown-menu" aria - labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="blog.html"> Blog</a>
+                                    <a class="dropdown-item" href="#">Kategorie</a>
+                                    <a class="dropdown-item" href="#">FAQ</a>
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#"> Projekt 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Kontakt<span class="sr-only">(current)</span></a>
+                            </li>
+                        </ul>
+                    </div>
+        </nav>
+        <div class="title">
+            <p class="bigger">Uložení nad.výšky do grafu
+            </p>
+            <p class="smaller">a vyhledání počasí
+            </p>
+        </div>
+        <div class="map" id="map">
+        </div>
+        <div class="pac-card" id="pac-card">
+            <div>
+                <div id="title">
+                    Vyhledávání polohy
+                </div>
+            </div>
+            <div id="pac-container">
+                <input id="pac-input" class="form-control" type="text" placeholder="Zadej polohu">
+            </div>
+        </div>
+        <div id="infowindow-content">
+            <img src="" width="16" height="16" id="place-icon">
+            <span id="place-name" class="title"></span><br>
+            <span id="place-address"></span>
+        </div>
+        <div class="row content">
+            <div class="col-md-6" id="graph">
+                <p>Nejsou vložená žádná data</p>
+            </div>
+            <div class="col-md-6" id="weather">
+                <p class="weather-message">Nebylo zvoleno žádné město</p>
+            </div>
+        </div>
+        <div class="row settings">
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        Jednotky
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <select class="form-control" id="units">
+                            <option value="metric">Celsius - Metr</option>
+                            <option value="imperial">Fahrenheit - Míle</option>
+                            <option value="">Kelvin - Metr</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        Jazyk výpisu města
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control is-valid" name="language" id="language" placeholder="Výchozí: čeština">
+                        <div id="language-results" class="btn-group-vertical">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="logo">my<span class="gold">VIA</span></h3>
+                    <p>Tyto stránky vznikly jako projekt do předmětu VIA, který je přednášen na Vysoké škole báňské - Technické univerzině Ostrava.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="small"> Poslední Tweet
+                    </h3>
+                    <span id="last-tweet"></span>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="small"> Poslední novinky
+                    </h3>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="small"> Náhodné fotografie
+                    </h3>
+                </div>
+            </div>
+            <div class="info">
+                <ul class="float-left copyright">
+                    <li> ©2017 Petr Dolejší
+                    </li>
+                    <li>
+                        <a href="#">Legal Notice</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+                <ul class="float-right social-networks">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear">
+            </div>
+        </footer>
+        <script>
+            var map;
+            var infowindow;
+            var myElevation = 0.0;
+            var myLat = 0.0;
+            var myLng = 0.0;
+            var Name = "";
+            var myLanguage = "CZ";
+            var myLanguageIndex = 1;
+            var searched = false;
+
+            function initMap() {
+                var uluru = {
+                    lat: 49.831246,
+                    lng: 18.160894
+                };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 13,
+                    center: uluru,
+                    styles: [{
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#f5f5f5"
+                        }]
+                    }, {
+                        "elementType": "labels.icon",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    }, {
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#616161"
+                        }]
+                    }, {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{
+                            "color": "#f5f5f5"
+                        }]
+                    }, {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.stroke",
+                        "stylers": [{
+                            "color": "#7a7a7a"
+                        }]
+                    }, {
+                        "featureType": "administrative.land_parcel",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#bdbdbd"
+                        }]
+                    }, {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#eeeeee"
+                        }]
+                    }, {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#757575"
+                        }]
+                    }, {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#e5e5e5"
+                        }]
+                    }, {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#9e9e9e"
+                        }]
+                    }, {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#ffffff"
+                        }]
+                    }, {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#757575"
+                        }]
+                    }, {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#dadada"
+                        }]
+                    }, {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#616161"
+                        }]
+                    }, {
+                        "featureType": "road.local",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#9e9e9e"
+                        }]
+                    }, {
+                        "featureType": "transit.line",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#e5e5e5"
+                        }]
+                    }, {
+                        "featureType": "transit.station",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#eeeeee"
+                        }]
+                    }, {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#c9c9c9"
+                        }]
+                    }, {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#9e9e9e"
+                        }]
+                    }]
+                });
+                var card = document.getElementById("pac-card");
+                var input = document.getElementById("pac-input");
+                var types = document.getElementById("type-selector");
+                var strictBounds = document.getElementById("strict-bounds-selector");
+                var elevator = new google.maps.ElevationService;
+                map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+                var autocomplete = new google.maps.places.Autocomplete(input);
+                autocomplete.bindTo("bounds", map);
+                var infowindow = new google.maps.InfoWindow();
+                var infowindowContent = document.getElementById("infowindow-content");
+                infowindow.setContent(infowindowContent);
+                var marker = new google.maps.Marker({
+                    map: map,
+                    anchorPoint: new google.maps.Point(0, -29)
+                });
+                autocomplete.addListener("place_changed", function() {
+                    infowindow.close();
+                    marker.setVisible(false);
+                    var place = autocomplete.getPlace();
+                    if (!place.geometry) {
+                        window.alert("No details available for input: '" + place.name + "'");
+                        return;
+                    }
+                    if (place.geometry.viewport) {
+                        map.fitBounds(place.geometry.viewport);
+                    } else {
+                        map.setCenter(place.geometry.location);
+                        map.setZoom(17);
+                    }
+                    marker.setPosition(place.geometry.location);
+                    marker.setVisible(true);
+                    displayLocationElevation(place.geometry.location,
+                        elevator);
+                    var address = '';
+                    if (place.address_components) {
+                        address = [(place.address_components[0] && place.address_components[0].short_name ||
+                            ''), (place.address_components[1] && place.address_components[1].short_name || ''), (place.address_components[2] &&
+                            place.address_components[2].short_name || '')].join(' ');
+                    }
+                    var contentString = "<div id = \"content\">" +
+                        "<div id = \"siteNotice\">" +
+                        "</div>" +
+                        "<div id = \"bodyContent\">" +
+                        "<h5 > " + place.name +
+                        "</h5>" +
+                        "<p><button id = \"btnAdd\" class=\"btn dark - yellow btn - sm\">Přidat</button></p>" +
+                        "</div>" +
+                        "</div>";
+                    myLat = place.geometry.location.lat();
+                    myLng = place.geometry.location.lng();
+                    myName = place.name;
+                    infowindowContent.children['place-icon'].src = place.icon;
+                    infowindow.setContent(contentString);
+                    infowindow.open(map, marker);
+                });
+            }
+
+            function displayLocationElevation(location,
+                elevator) {
+                elevator.getElevationForLocations({
+                    "locations": [location]
+                }, function(results, status) {
+                    if (status === 'OK') {
+                        if (results[0]) {
+                            myElevation = results[0].elevation;
+                        }
+                    }
+                });
+            }
+
+            function callback(results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    for (var i = 0; i <
+                        results.length; i++) {
+                        createMarker(results[i]);
+                    }
+                }
+            }
+
+            function createMarker(place) {
+                var placeLoc = place.geometry.location;
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent(place.name);
+                    infowindow.open(map, this);
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap&libraries=places"></script>
+
+        <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="js/popper.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/raphael.min.js" type="text/javascript"></script>
+        <script src="js/morris.min.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+
+        <script>
+            var array = [];
+            var chart = Morris.Area({
+                element: "graph",
+                data: array,
+                xkey: "y",
+                ykeys: ["a"],
+                labels: ["Nadmořská výška"],
+                parseTime: false,
+                fillOpacity: 1,
+                pointFillColors: ["#fec901"],
+                pointStrokeColors: ["#fff"],
+                lineColors: ["#aaa"],
+                smooth: false,
+            }).on("click", function(i, row) {
+                if ($("input[name=language]").hasClass("is-valid")) {
+                    $.ajax({
+                        type: "get",
+                        data: {
+                            lng: row["lng"],
+                            lat: row["lat"],
+                            units: $("#units").val(),
+                            language: myLanguage
+                        },
+                        dataType: "json",
+                        url: "weather.php",
+                        success: function(data) {
+                            var
+                                temperature = "";
+                            var wind = "";
+                            switch ($("#units").val()) {
+                                case "metric":
+                                    temperature = "°C";
+                                    wind = "m/s";
+                                    break;
+                                case "imperial":
+                                    temperature = "°F";
+                                    wind = "mps";
+                                    break;
+                                default:
+                                    temperature = "K";
+                                    wind = "m/s";
+                                    break;
+                            }
+                            $("#weather").empty().html("<div class = \"weather-widget\">" +
+                                "<div class = \"weather-widget-header\"> <div class = \"weather-widget-header-layout\">" +
+                                "<h2> " + data["name"] + ", " + data["sys"]["country"] + "</h2><p>" + data["weather"]["0"]["description"] +
+                                "</p></div>" +
+                                "<img src = \"https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/" + data["weather"]["0"]["icon"] + ".png\" width=\"128\" height = \"128\" alt = \"Počasí\"></div>" +
+                                "<div class = \"weather-widget-body\"><div class = \"weather-widget-body-layout\"><div class = \"weather-widget-body-temperature\">" +
+                                data["main"]["temp"] + "<span>" + temperature + "</span></div>" +
+                                "<div class = \"weather-widget-body-weather\"><div class = \"weather-widget-body-card\"><table ><tbody><tr><th colspan = \"2\">" + languages[myLanguageIndex][2] + "</th></tr>" +
+                                "<tr><td>" + languages[myLanguageIndex][3] + "</td><td>" + data["wind"]["speed"] + " " + wind + "</td></tr>" + "<tr><td>" + languages[myLanguageIndex][4] + "</td><td> " + data["main"]["humidity"] + " %</td></tr>" +
+                                "<tr><td>" + languages[myLanguageIndex][5] + "</td><td>" + data["main"]["pressure"] + "hPa </td></tr></tbody></table></div></div></div></div></div>");
+                        }
+                    })
+                }
+            });
+            $(document).on("click", "#btnAdd", function() {
+                if (array.length == 0) {
+                    $("#graph p").fadeOut(300);
+                    $("#graph svg").delay(300).fadeIn(300);
+                }
+                array.push({
+                    "y": myName,
+                    "a": myElevation.toFixed(1),
+                    "lat": myLat,
+                    "lng": myLng
+                });
+                chart.setData(array);
+            });
+            var languages = [
+                ["angličtina", "en", "Details", "Wind", "Humidity", "Pressure"],
+                ["čeština", "cz", "Detaily", "Vítr", "Vlhkost", "Tlak"],
+                ["francouzština", "fr", "Détails", "Vent", "Humidité", "Pression"],
+                ["chorvatština", "hr", "Detalji", "Vjetar", "Vlažnost", "Pritisak"],
+                ["němčina", "de", "Details", "Wind", "Feuchtigkeit", "Druck"],
+                ["madarština", "hu", "Részletek", "Szél", "Páratartalom", "Nyomás"],
+                ["polština", "pl", "Szczegóły", "Wiatr", "Wilgotność", "Ciśnienie"],
+                ["ruština", "ru", "детали", "ветер", "влажность", "давление"],
+                ["řečtina", "el", "Λεπτομέρειες", "Αέρας", "Υγρασία", "Πίεση"],
+                ["slovenština", "sk", "Detaily", "Vietor", "Vlhkosť", "Tlak"],
+                ["španělština", "es", "Detalles", "Viento", "Humedad", "Presión"],
+                ["turečtina", "tr", "Ayrıntılar", "Rüzgar", "Nem", "basınç"]
+            ];
+
+            function autocomplete(value) {
+                $("#language-results").empty();
+                if (value == "") {
+                    for (var i = 0, len = languages.length; i < len && i < 5; i++) {
+                        $("#language-results").append("<a class=\"btn yellow-darkgray\" onclick = \"complete('" + languages[i][0] + "')\" >" + languages[i][0] + "</a>");
+                    }
+                } else {
+                    var count = 0;
+                    for (var i = 0, len = languages.length; i < len && count < 5; i++) {
+                        if (languages[i][0].indexOf(value) >= 0) {
+                            count++;
+                            $("#language-results").append("<a class=\"btn yellow-darkgray\" onclick = \"complete('" + languages[i][0] + "')\" >" + languages[i][0] + "</a>");
+                        }
+                    }
+                }
+            }
+
+            function complete(text) {
+                $("input[name=language]").val(text);
+                check(text);
+            }
+
+            function check(text) {
+                if (text != "") {
+                    for (var i = 0, len = languages.length; i < len; i++) {
+                        if (languages[i][0] == text) {
+                            searched = true;
+                            myLanguage = languages[i][1];
+                            myLanguageIndex = i;
+                        }
+                    }
+                } else {
+                    searched = true;
+                    myLanguage = "cz";
+                    myLanguageIndex = 1;
+                }
+                if (searched) {
+                    $("input[name=language]").addClass("is-valid");
+                    $("input[name=language]").removeClass("is-invalid");
+                } else {
+                    $("input[name=language]").addClass("is-invalid");
+                    $("input[name=language]").removeClass("is-valid");
+                }
+            }
+
+            $(document).on("focusin", "#language", function() {
+                autocomplete($("input[name=language]").val());
+            });
+
+            $(document).on("focusout", "#language", function() {
+                setTimeout(function() {
+                    $("#language-results").empty();
+                }, 200);
+            });
+
+            $("input[name=language]").on("input", function(e) {
+                searched = false;
+                var value = $("input[name=language]").val();
+                autocomplete(value);
+                check(value);
+            });
+        </script>
+</body>
+
+</html>

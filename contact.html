@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kontakt | myVIA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type=text/css>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type=text/css>
+    <link rel="stylesheet" href="css/style.css" type=text/css>
+</head>
+
+<body class="background">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <h1 class="logo">my<span class="gold">VIA</span></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photogallery.html">Fotogalerie</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Blog
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="blog.html">Blog</a>
+                            <a class="dropdown-item" href="#">Kategorie</a>
+                            <a class="dropdown-item" href="#">FAQ</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project1.html">Projekt 1</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Kontakt<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="title">
+            <p class="bigger">Kontaktujte nás</p>
+            <p class="smaller">my vám neodpovíme</p>
+        </div>
+        <div class="map" id="map">
+
+        </div>
+        <div class="row content">
+            <div class="col-md-9">
+                <h3>Kontaktní formulář</h3>
+                <p>
+                    Neváhejte nás kontaktovat. My se zamyslíme, jestli Vám odpovíme.
+                </p>
+                <p>
+                    Odpovídáme pouze na mail.
+                </p>
+                <form method="get">
+                    <div class="form-group" id="form-name">
+                        <label for="input-name" class="form-control-label">Jméno</label>
+                        <input type="text" id="input-name" class="form-control">
+                    </div>
+                    <div class="form-group" id="form-mail">
+                        <label for="input-mail" class="form-control-label">Email</label>
+                        <input type="email" id="input-mail" class="form-control">
+                    </div>
+                    <div class="form-group" id="form-telephone">
+                        <label for="input-telephone" class="form-control-label">Telefon</label>
+                        <input type="text" id="input-telephone" class="form-control">
+                    </div>
+                    <div class="form-group" id="form-message">
+                        <label for="input-message" class="form-control-label">Zpráva</label>
+                        <textarea class="form-control" id="input-message" rows="3"></textarea>
+                    </div>
+                    <button type="sumbit" class="btn yellow-darkgray submit-to-button" id="send-contact-form">Odeslat</button>
+                </form>
+            </div>
+            <div class="col-md-3">
+                <h3>Kontakt</h3>
+                <p>17. listopadu 2172/15</p>
+                <p>708 00 Ostrava</p>
+                <h3>Sociální sítě</h3>
+                <ul class="contact social-networks">
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="logo">my<span class="gold">VIA</span></h3>
+                    <p>Tyto stránky vznikly jako projekt do předmětu VIA, který je přednášen na Vysoké škole báňské - Technické univerzině Ostrava.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="small">Poslední Tweet</h3>
+                    <span id="last-tweet"></span>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="small">Poslední novinky</h3>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="small">Náhodné fotografie</h3>
+                </div>
+            </div>
+            <div class="info">
+                <ul class="float-left copyright">
+                    <li>© 2017 Petr Dolejší</li>
+                    <li><a href="#">Legal Notice</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+                <ul class="float-right social-networks">
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </footer>
+        <script>
+            function initMap() {
+                var uluru = {
+                    lat: 49.831246,
+                    lng: 18.160894
+                };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    center: uluru,
+                    styles: [{
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#f5f5f5"
+                        }]
+                    }, {
+                        "elementType": "labels.icon",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    }, {
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#616161"
+                        }]
+                    }, {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{
+                            "color": "#f5f5f5"
+                        }]
+                    }, {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.stroke",
+                        "stylers": [{
+                            "color": "#7a7a7a"
+                        }]
+                    }, {
+                        "featureType": "administrative.land_parcel",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#bdbdbd"
+                        }]
+                    }, {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#eeeeee"
+                        }]
+                    }, {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#757575"
+                        }]
+                    }, {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#e5e5e5"
+                        }]
+                    }, {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#9e9e9e"
+                        }]
+                    }, {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#ffffff"
+                        }]
+                    }, {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#757575"
+                        }]
+                    }, {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#dadada"
+                        }]
+                    }, {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#616161"
+                        }]
+                    }, {
+                        "featureType": "road.local",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#9e9e9e"
+                        }]
+                    }, {
+                        "featureType": "transit.line",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#e5e5e5"
+                        }]
+                    }, {
+                        "featureType": "transit.station",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#eeeeee"
+                        }]
+                    }, {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [{
+                            "color": "#c9c9c9"
+                        }]
+                    }, {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#9e9e9e"
+                        }]
+                    }]
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap">
+        </script>
+
+        <script src="js/jquery-3.2.1.min.js" type=text/javascript></script>
+        <script src="js/popper.min.js" type=text/javascript></script>
+        <script src="js/bootstrap.min.js" type=text/javascript></script>
+        <script src="js/script.js" type=text/javascript></script>
+</body>
+
+</html>

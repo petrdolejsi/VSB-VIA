@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+    <title>Home | myVIA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="background">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+                <h1 class="logo">my<span class="gold">VIA</span></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photogallery.html">Fotogalerie</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Blog
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="blog.html">Blog</a>
+                            <a class="dropdown-item" href="#">Kategorie</a>
+                            <a class="dropdown-item" href="#">FAQ</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project1.html">Projekt 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="carousel">
+            <span class="left-button"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+            <span class="right-button"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+            <input type="text" name="actualSlide" id="actualSlide" hidden value="0">
+            <div class="carousel-body-out">
+                <div class="carousel-body hidden carouselSlide" id="carouselSlide1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <br>
+                            <p class="bigger">VIA</p>
+                            <p class="smaller">Informace o tomto předmětu</p>
+                            <a href="#" class="button white-dark">Více informací</a>
+                        </div>
+                        <div class="col-md-6 image">
+                            <img src="images/slider/via.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-body hidden carouselSlide" id="carouselSlide2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="bigger">Vysoká škola báňská</p>
+                            <p class="smaller">Technická univerzita Ostrava</p>
+                            <a href="#" class="button white-dark">Více informací</a>
+                        </div>
+                        <div class="col-md-6 image">
+                            <img src="images/slider/vsb.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-body hidden carouselSlide" id="carouselSlide3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="bigger">Projekt 1</p>
+                            <p class="smaller">do VIA</p>
+                            <a href="project1.html" class="button white-dark">Přejít</a>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="bigger">Projekt 2</p>
+                            <p class="smaller">Tyto stránky</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="row main-blocks">
+                <div class="col-md-4">
+                    <div class="main-blocks-icon"><i class="fa fa-code" aria-hidden="true"></i></div>
+                    <div class="main-blocks-text">
+                        <h3>Responsive Design</h3>
+                        <p>Tyto stránky jsou responzivní. Responzivní design je způsob stylování HTML dokumentu, které zaručí, že zobrazení stránky bude optimalizováno pro všechny druhy nejrůznějších zařízení (mobily, notebooky, netbooky, tablety atd.).</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="main-blocks-icon"><i class="fa fa-star" aria-hidden="true"></i></div>
+                    <div class="main-blocks-text">
+                        <h3>Nový rok za:</h3>
+                        <p>Odpočet nového roku pomocí JavaScriptu</p>
+                        <p id="countdown"></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="main-blocks-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+                    <div class="main-blocks-text">
+                        <h3>Klientská část</h3>
+                        <p>V tomto předmětu i na těchto stránkách je řešena poze klientská část.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row main-images">
+                <div class="col-md-3 col-sm-6">
+                    <div class="image"><img src="images/main/001.jpg" alt=""></div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="image"><img src="images/main/002.jpg" alt=""></div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="image"><img src="images/main/003.png" alt=""></div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="image"><img src="images/main/004.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="row browsers">
+                <div class="col-md-2-10">
+                    <div class="image"><img src="images/browsers/safari.png" alt=""></div>
+                </div>
+                <div class="col-md-2-10">
+                    <div class="image"><img src="images/browsers/chrome.png" alt=""></div>
+                </div>
+                <div class="col-md-2-10">
+                    <div class="image"><img src="images/browsers/firefox.png" alt=""></div>
+                </div>
+                <div class="col-md-2-10">
+                    <div class="image"><img src="images/browsers/edge.png" alt=""></div>
+                </div>
+                <div class="col-md-2-10">
+                    <div class="image"><img src="images/browsers/opera.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="logo">my<span class="gold">VIA</span></h3>
+                    <p>Tyto stránky vznikly jako projekt do předmětu VIA, který je přednášen na Vysoké škole báňské - Technické univerzině Ostrava.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="small">Poslední Tweet</h3>
+                    <span id="last-tweet"></span>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="small">Poslední novinky</h3>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="small">Náhodné fotografie</h3>
+                </div>
+            </div>
+            <div class="info">
+                <ul class="float-left copyright">
+                    <li>© 2017 Petr Dolejší</li>
+                    <li><a href="#">Legal Notice</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+                <ul class="float-right social-networks">
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </footer>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        var year = new Date().getFullYear();
+        var countDownDate = new Date("December 31, " + year + " 23:59:59").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Šťastný nový rok";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
